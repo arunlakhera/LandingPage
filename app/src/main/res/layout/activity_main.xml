@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    android:orientation="vertical"
+    tools:context="com.example.android.landingpage.MainActivity">
+
+    <!-- Image view for background Image-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.25"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bloogp2" />
+
+
+    <!-- Waveloading view for the Animation-->
+
+    <me.itangqi.waveloadingview.WaveLoadingView
+        android:id="@+id/waveloadingview"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+
+        app:wlv_borderColor="#F44336"
+        app:wlv_borderWidth="3dp"
+        app:wlv_round_rectangle="true"
+        app:wlv_shapeType="circle"
+        app:wlv_titleBottomColor="@android:color/white"
+
+        app:wlv_titleCenterColor="#FFFFFF"
+        app:wlv_titleCenterSize="24sp"
+        app:wlv_titleCenterStrokeColor="#FFFFFF"
+        app:wlv_titleCenterStrokeWidth="1dp"
+
+        app:wlv_waveAmplitude="70"
+        app:wlv_waveColor="#D50000"
+
+        >
+
+    </me.itangqi.waveloadingview.WaveLoadingView>
+
+
+    <!-- Text view for the Message-->
+    <TextView
+        android:id="@+id/message_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/waveloadingview"
+        android:layout_marginTop="3dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="...Can SAVE Someone's Life"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Text view for the Message-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_title"
+        android:layout_margin="2dp"
+        android:fontFamily="monospace"
+        android:text="Donate"
+        android:textAlignment="center"
+        android:textColor="#D50000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+
+    <!-- Button with less alpha value to give darker background so text is visible-->
+
+
+    <!-- Image view to show blood drop-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        app:srcCompat="@drawable/blooddrop" />
+
+    <!-- Text view for App Name-->
+
+    <TextView
+        android:id="@+id/appName_text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="1dp"
+        android:background="#D50000"
+        android:padding="5dp"
+        android:text="Donor2Donor"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <!-- Text View to show App Tag Line -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appName_text_View"
+        android:layout_centerHorizontal="true"
+        android:background="#212121"
+        android:padding="6dp"
+        android:text="Zindagi wala app"
+        android:textAlignment="center"
+        android:textColor="#D50000"
+        android:textStyle="bold" />
+
+    <!-- Text View to show Download Message-->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/app_button_layout"
+        android:layout_marginBottom="1dp"
+        android:background="#D50000"
+        android:padding="2dp"
+        android:text="Download the mobile app now"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+
+    <!-- Layout Design for App store Images -->
+
+    <LinearLayout
+        android:id="@+id/app_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#D50000"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/applePlay_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="applePlayClicked"
+                android:padding="2dp"
+                android:src="@drawable/applestorelogo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/googlePlay_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="googlePlayClicked"
+                android:src="@drawable/androidstorelogo" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
